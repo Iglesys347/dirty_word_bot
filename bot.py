@@ -9,6 +9,9 @@ Language supported :
 import discord
 from dirty_word_detector import DirtyWordDetector
 
+# enter here your bot token
+BOT_TOKEN = ""
+
 client = discord.Client()
 
 @client.event
@@ -31,4 +34,4 @@ async def on_message(message):
             await message.channel.send(f"Le mot {word} est vulgaire, je te conseille d'utiliser plutot : {', '.join(suggestions)}.")
 
 if __name__ == "__main__":
-    client.run("ODI1MDU2NDgxMzE2NTY5MTU5.YF4XuQ.dK57neTc-4E4oudKCkiEDczfNaM")
+    client.run(BOT_TOKEN)
